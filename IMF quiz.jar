@@ -1,0 +1,1115 @@
+.data
+invalidinp: .asciiz "\nInvalid Input!"
+prgk:.asciiz"\n\t\tWelcome to General knowledge part (Level 1)\n"
+print:.asciiz"\nExcellet! You have Passed level 1.\n\n\t\tWelcome to Intelligence part (Level 2)\n"
+prhis:.asciiz"\n\nExcellet! You have Passed level 2.\n\n\t\tWelcome to Islamic Histroy part (Level 3)\n"
+prompt: .asciiz"\nEnter your choice(1-4): "
+tot: .asciiz"\n\nYour Test Result is: \nTotal Score: "
+percentage: .asciiz"\nPercentage: "
+p: .asciiz"%"
+ff: .asciiz"\nYou have Failed the test\nBetter Luck Next Time!!"
+pp: .asciiz"\nCongratulations! \nYou have passed the test!"
+promptstart: .asciiz "\n\nDo you want to start the quiz?(Press 1 for Yes or Press 2 for No): "
+name: .asciiz "\nEnter Your name: "  
+rollno: .asciiz "Enter your roll no: " 
+wlcm: .asciiz "\t\tWelcome to the IMF quiz"
+instructions: .asciiz "\nInstructions:\n\nBefore starting the quiz, Please read the following instructions carefully:\n*) The Quiz will consist of three levels.\n\t-)Level 1 is related general knowledge based questions.\n\t-)Level 2 is related to intelligence based questions.\n\t-)Level 3 is related to history \n*) It is necessary to pass all these three levels.\n*) If you failed any of these levels, you will not be able to proceed further and considered as fail\n*)There will be 10 questions in each levels. All questions carry 1 mark\n*)There will be no negative marking."                                        
+                                                       
+                                                       #GeneralKnowledge Part
+Q1gk: .asciiz"\n1)What is the capital of France?\n1. Berlin\n2. London\n3. Paris\n4. Madrid"
+Q2gk: .asciiz"\n2)Which planet is known as the Red Planet?\n1. Earth\n2. Mars\n3. Jupiter\n4. Venus"
+Q3gk: .asciiz"\n3)Who wrote 'Romeo and Juliet'?\n1. Charles Dickens\n2. William Shakespeare\n3. Jane Austen\n4. Mark Twain"
+Q4gk: .asciiz"\n4)What is the largest mammal?\n1. Elephant\n2. Blue Whale\n3. Giraffe\n4. Dolphin"
+Q5gk: .asciiz"\n5)Which country is known as the Land of the Rising Sun?\n1. China\n2. Japan\n3. South Korea\n4. Vietnam"
+Q6gk: .asciiz"\n6)What is the chemical symbol for gold?\n1. Au\n2. Ag\n3. Fe\n4. Cu"
+Q7gk: .asciiz"\n7)Who painted the Mona Lisa?\n1. Pablo Picasso\n2. Vincent van Gogh\n3. Leonardo da Vinci\n4. Claude Monet"
+Q8gk: .asciiz"\n8)What is the currency of Japan?\n1. Yuan\n2. Yen\n3. Won\n4. Ringgit"
+Q9gk: .asciiz"\n9)Which element has the chemical symbol 'O'?\n1. Oxygen\n2. Gold\n3. Uranium\n4. Silver"
+Q10gk: .asciiz"\n10)In what year did the Titanic sink?\n1. 1912\n2. 1901\n3. 1925\n4. 1933"
+                                                        
+                                                        #Intelligence part
+intq1: .asciiz "\n1) 2    5    8    11     14   ___\n1) 17\n2) 19\n3) 18\n4) 21"
+intq2: .asciiz "\n2)If 28th day of a month is Sunday then 2nd day will be: \n1) Thursday\n2) Wednesday\n3) Tuesday\n4) Friday"
+intq3: .asciiz "\n3)One third of 10% of 90 is?\n1) 30\n2) 10\n3) 81\n4) 3"
+intq4: .asciiz "\n4)If Yesterday was Sunday then the day after tomorrow will be:\n1) Thursday\n2) Wednesday\n3) Tuesday\n4) Friday"
+intq5: .asciiz "\n5)Out of 500 students 360 are boys. The percentage of girls will be:\n1) 120%\n2) 28%\n3) 1.2%\n4) 3.6%"
+intq6: .asciiz "\n6) 115, 55, 170, 65, 235, ____\n1) 75\n2) 310\n3) 240\n4) 70"
+intq7: .asciiz "\n7)Adil is 5 years old and his sister is 3 times of his age. What will be the age of his sister when Adil will be 15 years old?:\n1) 18\n2) 28\n3) 25\n4) 15"
+intq8: .asciiz "\n8) B, E, J, Q, ____\n1) X\n2) Y\n3) A\n4) Z"
+intq9: .asciiz "\n9)If 5 men write 5 pages in 5 minutes, then 1 man will write 1 page in ____ minutes?:\n1) 5\n2) 10\n3) 25\n4)15"
+intq10: .asciiz "\n10)If Ahmed walks towards North and then turn left.After some time he turned right then his present direction will be?\n1) East\n2) West\n3) North\n4) South"
+                                                           
+                                                           #Islamic part
+isq1: .asciiz"\n1)Who was the founder of Islam?\n1. Abu Bakr\n2. Umar ibn al-Khattab\n3. Ali ibn Abi Talib\n4. Prophet Muhammad"
+isq2: .asciiz"\n2)Which event marks the beginning of the Islamic calendar?\n1. Hajj\n2. Eid-al-Fitr\n3. The Hijra\n4. Battle of Badr"
+isq3: .asciiz"\n3)Which battle is considered a turning point in early Islamic expansion?\n1. Battle of Yarmouk\n2. Battle of Uhud\n3. Battle of Badr\n4. Battle of Tours"
+isq4: .asciiz"\n4)Who were the four Rashidun Caliphs?\n1. Ali, Hasan, Husaain, Usman\n2. Abu Bakr, Umar, Usman, Ali\n3. Umar, Usman, Abbas, Ali\n4. Abu Bakr, Umar, Ali, Hasan"
+isq5: .asciiz"\n5)Which dynasty established the first hereditary Islamic caliphate?\n1.  Umayyad\n2. Abbasid\n3. Fatimid\n4. Seljuk"
+isq6: .asciiz"\n6)Who recaptured Jerusalem from the Crusaders in 1187?\n1. Harun al-Rashid\n2.  Saladin\n3. Mehmed the Conqueror\n4. Suleiman the Magnificent"
+isq7: .asciiz"\n7)What were the main achievements of the Islamic Golden Age?\n1. Advancements in science, medicine, mathematics, and art\n2. Exploration of the Americas\n3. Invention of printing press\n4. Development of industrial machinery"
+isq8: .asciiz"\n8)Who was the famous Persian poet known for his works like 'Masnavi' and 'Divan-e Shams-e Tabrizi'?\n1. Ibn Khaldun\n2. Rumi\n3. Al-Farabi\n4. Omar Khayyam"
+isq9: .asciiz"\n9)What led to the split between Sunni and Shia Islam?\n1. Dispute over religious rituals\n2. Disagreement over the leadership succession\n3. Differences in prayer timings\n4. Varying interpretations of the Quran"
+isq10: .asciiz"\n10)Which empire rose to prominence in the 14th century and expanded across the Middle East, North Africa, and parts of Europe?\n1. Mughal Empire\n2. Safavid Empire\n3.  Abbasid Empire\n4. Ottoman Empire"
+name_space: .space 32
+
+
+.text
+main:
+la $a0,wlcm
+li $v0,4
+syscall
+
+la $a0,name
+li $v0,4
+syscall
+
+li $v0, 8
+la $a0, name_space
+li $a1, 32  
+syscall 
+
+la $a0,rollno
+li $v0,4
+syscall
+
+li $v0,5
+syscall
+move $t5,$v0
+
+la $a0,instructions
+li $v0,4
+syscall
+
+startprompt:
+la $a0,promptstart
+li $v0,4
+syscall
+
+li $v0,5
+syscall
+move $t0,$v0
+beq $t0,1,gkpart
+bge $t0,3,invalid_input
+beqz $t0,invalid_input
+j exit
+#t0 me input store horaha
+#t1 me answer hardcoded h
+#t2 me questions ka counter chal raha hay
+#t3 me answer ka counter chal raha hay for gk part
+#t8 me answer ka counter chal raha hay for intelligence part
+#s0 total no of questions asked
+#s1 total no of points in gk
+#s2 total no of points in intelligencce
+#s3 total no of points in Islamic
+
+gkpart:
+
+#Question 1
+la $a0,prgk
+li $v0,4
+syscall
+
+q1:
+li $t1,3
+la $a0, Q1gk
+li $v0, 4
+syscall
+
+prompt1:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+beq $t0,0,prompt1
+bge $t0,5,prompt1
+
+
+li $t2,1        
+add $s0,$s0,$t2
+
+bne $t0,$t1,q2
+j correctans1
+
+correctans1:
+li $t3,1
+add $s1,$s1,$t3
+
+j q2
+
+#Question 2
+
+q2:
+li $t1,2
+la $a0, Q2gk
+li $v0, 4
+syscall
+
+prompt2:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+beq $t0,0,prompt2
+bge $t0,5,prompt2
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q3
+j correctans2
+
+correctans2:   
+li $t3,1
+add $s1,$s1,$t3
+j q3
+
+#Question 3
+
+q3:
+li $t1,2
+la $a0, Q3gk
+li $v0, 4
+syscall
+
+prompt3:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt3
+beq $t0,0,prompt3
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q4
+j correctans3
+
+correctans3:
+
+li $t3,1
+add $s1,$s1,$t3
+
+j q4
+
+#Question 4
+
+q4:
+li $t1,2
+la $a0, Q4gk
+li $v0, 4
+syscall
+
+prompt4:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt4
+beq $t0,0,prompt4
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q5
+j correctans4
+
+correctans4:
+li $t3,1
+add $s1,$s1,$t3
+
+j q5
+
+#Question 5
+
+q5:
+li $t1,2
+la $a0, Q5gk
+li $v0, 4
+syscall
+
+prompt5:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt5
+beq $t0,0,prompt5
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q6
+j correctans5
+
+correctans5:
+li $t3,1
+add $s1,$s1,$t3
+j q6
+
+#Question 6
+q6:
+li $t1,1
+la $a0, Q6gk
+li $v0, 4
+syscall
+
+prompt6:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+beq $t0,0,prompt6
+bge $t0,5,prompt6
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q7
+j correctans6
+
+correctans6:
+li $t3,1
+add $s1,$s1,$t3
+j q7
+
+#Question 7
+
+q7:
+li $t1,3
+la $a0, Q7gk
+li $v0, 4
+syscall
+
+prompt7:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt7
+beq $t0,0,prompt7
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q8
+j correctans7
+
+correctans7:
+li $t3,1
+add $s1,$s1,$t3
+j q8
+
+#Question 8
+
+q8:
+li $t1,2
+la $a0, Q8gk
+li $v0, 4
+syscall
+
+prompt8:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt8
+beq $t0,0,prompt8
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q9
+j correctans8
+
+correctans8:
+li $t3,1
+add $s1,$s1,$t3
+j q9
+
+#Question 9
+q9:
+li $t1,1
+la $a0, Q9gk
+li $v0, 4
+syscall
+
+prompt9:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt9
+beq $t0,0,prompt9
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q10
+j correctans9
+
+correctans9:
+li $t3,1
+add $s1,$s1,$t3
+j q10
+
+
+#Question 10
+q10:
+li $t1,1
+la $a0, Q10gk
+li $v0, 4
+syscall
+
+prompt10:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt10
+beq $t0,0,prompt10
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,check
+j correctans10
+
+correctans10:
+li $t3,1
+add $s1,$s1,$t3
+j check
+
+#-------------------------------------Intelligence part---------------------------------------------
+
+intelligence:
+la $a0,print
+li $v0,4
+syscall
+#question11
+q11:
+li $t1,1
+la $a0, intq1
+li $v0, 4
+syscall
+
+prompt11:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt11
+beq $t0,0,prompt11
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q12
+j correctans11
+
+correctans11:
+
+li $t3,1
+add $s2,$s2,$t3
+j q12
+
+#Question12
+
+q12:
+li $t1,3
+la $a0, intq2
+li $v0, 4
+syscall
+
+prompt12:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt12
+beq $t0,0,prompt12
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q13
+j correctans12
+
+correctans12:   
+li $t3,1
+add $s2,$s2,$t3
+j q13
+
+#Question 3
+
+q13:
+li $t1,4
+la $a0, intq3
+li $v0, 4
+syscall
+
+prompt13:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt13
+beq $t0,0,prompt13
+
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q14
+j correctans13
+
+correctans13:
+
+li $t3,1
+add $s2,$s2,$t3
+
+j q14
+
+#Question 4
+
+q14:
+li $t1,2
+la $a0, intq4
+li $v0, 4
+syscall
+
+prompt14:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt14
+beq $t0,0,prompt14
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q15
+j correctans14
+
+correctans14:
+li $t3,1
+add $s2,$s2,$t3
+
+j q15
+
+#Question 5
+
+q15:
+li $t1,2
+la $a0, intq5
+li $v0, 4
+syscall
+
+prompt15:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt15
+beq $t0,0,prompt15
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q16
+j correctans15
+
+correctans15:
+li $t3,1
+add $s2,$s2,$t3
+j q16
+
+#Question 6
+q16:
+li $t1,1
+la $a0, intq6
+li $v0, 4
+syscall
+
+prompt16:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt16
+beq $t0,0,prompt16
+
+
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q17
+j correctans16
+
+correctans16:
+li $t3,1
+add $s2,$s2,$t3
+j q17
+
+#Question 7
+
+q17:
+li $t1,3
+la $a0, intq7
+li $v0, 4
+syscall
+
+prompt17:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt17
+beq $t0,0,prompt17
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q18
+j correctans17
+
+correctans17:
+li $t3,1
+add $s2,$s2,$t3
+j q18
+
+#Question 8
+
+q18:
+li $t1,4
+la $a0, intq8
+li $v0, 4
+syscall
+
+prompt18:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt18
+beq $t0,0,prompt18
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q19
+j correctans18
+
+correctans18:
+li $t3,1
+add $s2,$s2,$t3
+j q19
+
+#Question 9
+q19:
+li $t1,1
+la $a0, intq9
+li $v0, 4
+syscall
+
+prompt19:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt19
+beq $t0,0,prompt19
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q20
+j correctans19
+
+correctans19:
+li $t3,1
+add $s2,$s2,$t3
+j q20
+
+
+#Question 10
+q20:
+li $t1,3
+la $a0, intq10
+li $v0, 4
+syscall
+
+prompt20:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt20
+beq $t0,0,prompt20
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,check2
+j correctans20
+
+correctans20:
+li $t2,1   
+add $s2,$s2,$t2
+
+li $t3,1
+add $s1,$s1,$t3
+j check2
+#------------------------------------History Part---------------------------------------------------
+history:
+
+la $a0,prhis
+li $v0,4
+syscall
+
+q21:
+
+li $t1,4
+la $a0, isq1
+li $v0, 4
+syscall
+
+prompt21:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt21
+beq $t0,0,prompt21
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q22
+j correctans21
+
+correctans21:
+
+li $t3,1
+add $s3,$s3,$t3
+j q22
+
+q22:
+
+li $t1,3
+la $a0, isq2
+li $v0, 4
+syscall
+
+prompt22:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt22
+beq $t0,0,prompt22
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q23
+j correctans22
+
+correctans22:
+
+li $t3,1
+add $s3,$s3,$t3
+j q23
+
+q23:
+
+li $t1,1
+la $a0, isq3
+li $v0, 4
+syscall
+
+prompt23:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt23
+beq $t0,0,prompt23
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q24
+j correctans23
+
+correctans23:
+
+li $t3,1
+add $s3,$s3,$t3
+j q24
+
+q24:
+
+li $t1,2
+la $a0, isq4
+li $v0, 4
+syscall
+
+prompt24:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt24
+beq $t0,0,prompt24
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q25
+j correctans24
+
+correctans24:
+
+li $t3,1
+add $s3,$s3,$t3
+j q25
+
+q25:
+
+li $t1,1
+la $a0, isq5
+li $v0, 4
+syscall
+
+prompt25:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt25
+beq $t0,0,prompt25
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q26
+j correctans25
+
+correctans25:
+
+li $t3,1
+add $s3,$s3,$t3
+j q26
+
+q26:
+
+li $t1,2
+la $a0, isq6
+li $v0, 4
+syscall
+
+prompt26:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt26
+beq $t0,0,prompt26
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q27
+j correctans26
+
+correctans26:
+
+li $t3,1
+add $s3,$s3,$t3
+j q27
+
+q27:
+
+li $t1,1
+la $a0, isq7
+li $v0, 4
+syscall
+
+prompt27:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt27
+beq $t0,0,prompt27
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q28
+j correctans27
+
+correctans27:
+
+li $t3,1
+add $s3,$s3,$t3
+j q28
+
+q28:
+
+li $t1,2
+la $a0, isq8
+li $v0, 4
+syscall
+
+prompt28:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt28
+beq $t0,0,prompt28
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q29
+j correctans28
+
+correctans28:
+
+li $t3,1
+add $s3,$s3,$t3
+j q29
+
+q29:
+
+li $t1,2
+la $a0, isq9
+li $v0, 4
+syscall
+
+prompt29:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt29
+beq $t0,0,prompt29
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,q30
+j correctans29
+
+correctans29:
+
+li $t3,1
+add $s3,$s3,$t3
+j q30
+
+q30:
+
+li $t1,4
+la $a0, isq10
+li $v0, 4
+syscall
+
+prompt30:
+la $a0,prompt
+li $v0,4
+syscall
+
+li $v0, 5
+syscall
+move $t0,$v0
+bge $t0,5,prompt30
+beq $t0,0,prompt30
+
+li $t2,1   
+add $s0,$s0,$t2
+
+bne $t0,$t1,check3
+j correctans30
+
+correctans30:
+
+li $t3,1
+add $s3,$s3,$t3
+j check3
+#beq $s0,30,check2
+
+
+
+
+
+
+#-----------------------------------------------Result Methods----------------------------------------------
+
+check:
+blt $s1,5,fail
+j intelligence
+
+check2:
+blt $s2,5,fail
+j history
+
+check3:
+blt $s3,5,fail
+j pass
+
+fail:
+la $a0,ff
+li $v0,4
+syscall
+
+j exit
+
+pass:
+la $a0,pp
+li $v0,4
+syscall
+
+la $a0,tot
+li $v0,4
+syscall
+
+add $s1,$s1,$s2
+add $s1,$s1,$s3
+
+move $a0,$s1
+li $v0,1
+syscall
+
+#percentage
+
+la $a0,percentage
+li $v0,4
+syscall
+
+li $t7,100 
+li $t8,30
+mult $s1,$t7
+mflo $s1
+div $s1,$t8
+mflo $t9
+
+move $a0,$t9
+li $v0,1
+syscall
+
+la $a0,p
+li $v0,4
+syscall
+exit:
+
+li $v0,10
+syscall
+invalid_input:
+li $v0,4
+la $a0,invalidinp
+syscall
+j startprompt
